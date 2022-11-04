@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
+:root {
+  --section-overlay: rgba(255, 255, 255, 0.25);
+  --background-overlay: rgba(0, 0, 0, 0.2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-overlay);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* top*/
+
+/* temp area text*/
+.section {
+  width: 80%;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/*input and temp area*/
+.section__inputs,
+.section__temperature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-overlay);
+}
+
+/*enter city input*/
+.section__inputs > input {
+  margin: auto;
+  border: 0.8px solid white;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 400;
+  width: 100%;
+}
+
+/*enter city focus*/
+.section__inputs > input:focus {
+  outline: none;
+}
+/*weather icon*/
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.icon > h3 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.temperature > h1 {
+  font-size: 135px;
+  font-weight: 300;
+}
